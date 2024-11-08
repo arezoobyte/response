@@ -1,0 +1,39 @@
+@media (min-width: 1000px) {
+  .col {
+    width: 100%;
+    border: 2px solid red;
+  }
+}
+@media (min-width: 576px) and (max-width: 999px) {
+  .col {
+    width: 100%;
+    border: 2px solid blue;
+  }
+}
+@media (max-width: 575px) {
+  .col {
+    width: 100%;
+    border: 2px solid green;
+  }
+}
+body body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.col {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+}
+
+/*# sourceMappingURL=style.css.map */

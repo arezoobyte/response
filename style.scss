@@ -1,0 +1,57 @@
+    $desktop-width: 1000px;
+    $tablet-width: 576px;
+    $mobile-width: 0px;
+
+    @mixin responsive-col($screen) {
+      @if $screen ==desktop {
+        @media (min-width: $desktop-width) {
+          .col {
+            width: 100%;
+            border: 2px solid red;
+          }
+        }
+      }
+
+      @else if $screen ==tablet {
+        @media (min-width: $tablet-width) and (max-width: #{$desktop-width - 1}) {
+          .col {
+            width: 100%;
+            border: 2px solid blue;
+          }
+        }
+      }
+
+      @else if $screen ==mobile {
+        @media (max-width: #{$tablet-width - 1}) {
+          .col {
+            width: 100%;
+            border: 2px solid green;
+          }
+        }
+      }
+    }
+
+    @include responsive-col(desktop);
+    @include responsive-col(tablet);
+    @include responsive-col(mobile);
+
+    body body {
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+
+    }
+
+    .col {
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+    }
